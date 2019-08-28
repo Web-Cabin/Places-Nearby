@@ -4,6 +4,7 @@
   "description": "Places Nearby and Activities Nearby (Bottom part of page before footer)",
   "main": "index.js",
   "dependencies": {
+    "@lingui/react": "^2.8.3",
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
@@ -21,6 +22,9 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
+    "@lingui/cli": "^2.8.3",
+    "@lingui/macro": "^2.8.3",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
@@ -37,7 +41,8 @@
   "scripts": {
     "react-dev": "webpack -d --watch",
     "seed": "node seed/seed.js",
-    "server-dev": "nodemon server/app.js"
+    "server-dev": "nodemon server/app.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",

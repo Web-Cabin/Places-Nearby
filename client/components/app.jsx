@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'; 
-import PlacesNearby from './PlacesNearby.jsx'
+import PlacesNearby from './PlacesNearby.jsx'; 
 
 class App extends Component {
   constructor(props){
