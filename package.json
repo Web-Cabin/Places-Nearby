@@ -1,5 +1,5 @@
 {
-  "name": "places-nearby-module",
+  "name": "places-nearby",
   "version": "1.0.0",
   "description": "Places Nearby and Activities Nearby (Bottom part of page before footer)",
   "main": "index.js",
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/miketkim/PlacesNearBy-Module.git"
+    "url": "git+https://github.com/miketkim/Places-Nearby.git"
   },
   "keywords": [
     "places",
@@ -50,7 +50,7 @@
   "author": "Mike Kim",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/miketkim/PlacesNearBy-Module/issues"
+    "url": "https://github.com/miketkim/Places-Nearby/issues"
   },
-  "homepage": "https://github.com/miketkim/PlacesNearBy-Module#readme"
+  "homepage": "https://github.com/miketkim/Places-Nearby#readme"
 }
