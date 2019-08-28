@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'; 
 
+
+//Component CSS 
 const Slider = styled.div`
     position: relative;
     width: 500px;
@@ -72,13 +74,13 @@ const BackArrow = styled.div`
 //     color: #222
 //   }
   
-
+//REACT Component 
 class PlacesNearby extends Component {
     constructor(props) {
       super(props)
 
       this.state = {
-        images: [`https://nearby-recommendations.s3-us-west-1.amazonaws.com/1.jpg`, `https://nearby-recommendations.s3-us-west-1.amazonaws.com/2.jpg`, `https://nearby-recommendations.s3-us-west-1.amazonaws.com/3.jpg`, `https://nearby-recommendations.s3-us-west-1.amazonaws.com/4.jpg`], 
+        //images: [`https://nearby-recommendations.s3-us-west-1.amazonaws.com/1.jpg`, `https://nearby-recommendations.s3-us-west-1.amazonaws.com/2.jpg`, `https://nearby-recommendations.s3-us-west-1.amazonaws.com/3.jpg`, `https://nearby-recommendations.s3-us-west-1.amazonaws.com/4.jpg`], 
         places: [],
         currentIndex: 0,
         translateValue: 0
@@ -99,17 +101,12 @@ class PlacesNearby extends Component {
     }
   
     goToNextSlide() {
-      // Exiting the method early if we are at the end of the images array.
-      // We also want to reset currentIndex and translateValue, so we return
-      // to the first image in the array.
       if(this.state.currentIndex === this.props.places.length - 1) {
         return this.setState({
           currentIndex: 0,
           translateValue: 0
         })
       }
-      
-      // This will not run if we met the if condition above
       this.setState(prevState => ({
         currentIndex: prevState.currentIndex + 1,
         translateValue: prevState.translateValue + -(this.slideWidth())
