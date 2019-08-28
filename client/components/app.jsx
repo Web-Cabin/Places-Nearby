@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import axios from 'axios'; 
-import PlacesNearby from './PlacesNearby.jsx'; 
+import './App.css';
+import PlacesCard from './PlacesCard.jsx';
 
-class App extends Component {
-  constructor(props){
+class App extends React.Component {
+  constructor(props) {
     super(props);
     this.state = {
-      places: [], 
-      activities: []
+      places: [],
+      fadedleft: true,
+      fadedright: false,
+      start: 0,
+      finish: 3
     }
-
-    this.fetchPlaces = this.fetchPlaces.bind(this); 
   }
   componentDidMount() {
     this.fetchPlaces()
+    //this.setState({property: this.state.places[0]})
   }
 
   fetchPlaces() {
@@ -21,26 +24,72 @@ class App extends Component {
     })
     .then(res => {
       const places = res.data;
-      this.setState({ places });
+      this.setState({ 
+        places: places, 
+        property: places[0]
+      });
     })
   }
 
-  //same thing for Activities to be done later
-  // fetchActivities() {
-  //   axios.get('/api/nearbyActivities', {
-  //   })
-  //   .then(res => {
-  //     const activities = res.data; 
-  //     this.setState({activities})
-  //   })
-  // }
-  render() {
-    return (
-      <div>
-        <PlacesNearby places ={this.state.places}/>
-      </div>
-    );
+  leftClick() {
+    let start = this.state.start;
+    let finish = this.state.finish;
+    if (start > 0 && finish > 0) {
+      this.setState({
+        start: start - 1,
+        finish: finish - 1,
+      });
+    } else {
+      this.setState({
+        fadedleft: true
+      });
+    }
+    this.setState({
+      fadedright: false
+    })
   }
-}
+  rightClick() {
+    let start = this.state.start;
+    let finish = this.state.finish;
+    if (finish < this.state.places.length) {
+      this.setState({
+        start: start + 1,
+        finish: finish + 1
+      });
+    } else {
+      this.setState({
+        fadedright: true
+      });
+    }
+    
+    this.setState({
+      fadedleft: false
+    });
+  }
+  render() {
+    var startindex = this.state.start;
+    var finishindex = this.state.finish;
+    const fadedleft = this.state.fadedleft ? "arrow-left faded-left" : "arrow-left";
+    const fadedright = this.state.fadedright ? "arrow-right faded-right" : "arrow-right";
+    return (
+      <div className="container">
+        <div className="slideshow row col-md-12">
+          <div className={fadedleft} onClick={this.leftClick.bind(this)}></div>
+          {
+            this.state.places.slice(startindex, finishindex).map(place => 
+            <PlacesCard key={place.id} place={place} />)
+              // return (
+              //   <div key={imageindex}>
+              //     <img className="image" src={image.photoUrl} />
+              //   </div>
+              // )
+            }
+           }
+          <div className={fadedright} onClick={this.rightClick.bind(this)}></div>
+        </div>
+      </div>
+    )
+  }
+};
 
 export default App;
