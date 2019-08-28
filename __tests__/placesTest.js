@@ -1,7 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { configure } from 'enzyme';
+<<<<<<< HEAD:__tests__/placesTest.js
 import PlacesNearby from '../client/components/PlacesNearby';
+=======
+import App from '../client/components/app.jsx';
+
+>>>>>>> text-tophotos:__tests__/test.js
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
@@ -55,10 +60,10 @@ describe('Place Component', () => {
     "__v" : 0 
   }];
   const wrapper = shallow(
-    <PlacesNearby places={testPlaceList} savedList={[]} renderList={() => {}} />,
+    <App places={testPlaceList} savedList={[]} renderList={() => {}} />,
   );
   const wrapperBig = shallow(
-    <PlacesNearby places={extendedList} savedList={[]} renderList={() => {}} />,
+    <App places={extendedList} savedList={[]} renderList={() => {}} />,
   );  
 
   it('should render 3 places', () => {

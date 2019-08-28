@@ -1,0 +1,60 @@
+body {
+    height: 100%;
+    margin:0;
+    padding:0;
+  }
+  
+  .slideshow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    padding: 2em;
+    background-color: #ffffff;
+    margin: 2em auto;
+    border-radius: 10px;
+  }
+  
+  .arrow-left {
+    align-self: center;
+    height:0;
+    width: 2em;
+    padding:0;
+    margin: 0.5em;
+    border-top: 3em solid transparent;
+    border-right: 3em solid;
+    border-bottom: 3em solid transparent;
+    cursor: pointer;
+  }
+  
+  .arrow-right {
+    align-self: center;
+    height:0;
+    width: 2em;
+    padding:0;
+    margin: 0.5em;
+    border-top: 3em solid transparent;
+    border-left: 3em solid;
+    border-bottom: 3em solid transparent;
+    cursor: pointer;
+  }
+  
+  .faded-left {
+    border-right: 3em solid;
+  }
+  
+  .faded-right {
+    border-left: 3em solid;
+  }
+  
+  .image {
+    width: 190px;
+    height: 130px;
+    object-fit: cover;
+    margin: auto 0.1em;
+    border-radius: 5px;
+    animation: appear 1.5s ease-in;
+  }
+  
