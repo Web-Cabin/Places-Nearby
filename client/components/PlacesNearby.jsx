@@ -86,17 +86,7 @@ class PlacesNearby extends Component {
       this.goToNextSlide = this.goToNextSlide.bind(this)
       this.goToPrevSlide = this.goToPrevSlide.bind(this)
       this.slideWidth = this.slideWidth.bind(this);
-      //this.getPhotoUrls = this.getPhotoUrls.bind(this);
     }
-
-    // componentDidMount() {
-    //     this.props.places.map((image) => (
-    //         this.setState({
-    //             places: [...this.state.places, image.photoUrl]
-    //         })
-    //     ))
-
-    // }
   
     goToPrevSlide() {
       if(this.state.currentIndex === 0)
@@ -131,7 +121,6 @@ class PlacesNearby extends Component {
     }
   
     render() {
-        //this.getPhotoUrls()
       return (
         <div>
         <Slider>
