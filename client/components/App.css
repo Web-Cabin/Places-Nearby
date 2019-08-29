@@ -12,7 +12,6 @@ body {
     font-size: 1.5em;
   }
 
-<<<<<<< HEAD
   div.item {
     vertical-align: top;
     display: inline-block;
@@ -21,8 +20,6 @@ body {
     width: 350px; 
   }
 
-=======
->>>>>>> f6d3f83e24a384281fb44343328d0ed79b5a36f3
   .propertyType {
     font-family: Nunito Sans, sans-serff; 
     padding-top: 8px;
@@ -43,7 +40,6 @@ body {
     color: rgb(72,72,72);
   }
 
-<<<<<<< HEAD
   #wrapper {
     display: flex;
   }
@@ -54,9 +50,6 @@ body {
 
   #reviews {
     flex: 1;
-=======
-  .reviews {
->>>>>>> f6d3f83e24a384281fb44343328d0ed79b5a36f3
     font-family: Montserrat, sans-serff; 
     padding-top: 3px;
     padding-bottom: 1px;
@@ -67,12 +60,9 @@ body {
 
   .description {
     font-family: Nunito Sans, sans-serff; 
-<<<<<<< HEAD
     font-size: 1.05em;
     font-weight: 600px;
     font-style: bold; 
-=======
->>>>>>> f6d3f83e24a384281fb44343328d0ed79b5a36f3
     color: rgb(72, 72, 72);
   }
 
