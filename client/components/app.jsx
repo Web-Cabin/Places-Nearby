@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 import PlacesCard from './PlacesCard.jsx';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,7 +16,6 @@ class App extends React.Component {
   }
   componentDidMount() {
     this.fetchPlaces()
-    //this.setState({property: this.state.places[0]})
   }
 
   fetchPlaces() {
@@ -25,9 +24,7 @@ class App extends React.Component {
     .then(res => {
       const places = res.data;
       this.setState({ 
-        places: places, 
-        property: places[0]
-      });
+        places: places });
     })
   }
 
@@ -79,7 +76,6 @@ class App extends React.Component {
             this.state.places.slice(startindex, finishindex).map(place => 
             <PlacesCard key={place.id} place={place} />)
             }
-           }
           <div className={fadedright} onClick={this.rightClick.bind(this)}></div>
         </div>
       </div>
@@ -88,5 +84,3 @@ class App extends React.Component {
 };
 
 export default App;
-
-module.exports = App;
