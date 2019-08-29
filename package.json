@@ -46,7 +46,7 @@
     "react-dev": "webpack -d --watch",
     "seed": "node seed/seed.js",
     "server-dev": "nodemon server/app.js",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "jest": {
     "moduleNameMapper": {

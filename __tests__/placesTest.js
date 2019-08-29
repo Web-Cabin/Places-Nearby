@@ -1,12 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { configure } from 'enzyme';
-<<<<<<< HEAD:__tests__/placesTest.js
-import PlacesNearby from '../client/components/PlacesNearby';
-=======
 import App from '../client/components/app.jsx';
 
->>>>>>> text-tophotos:__tests__/test.js
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
@@ -48,24 +44,10 @@ describe('Place Component', () => {
       "__v" : 0 
     }
   ];
-  const extendedList = [...testPlaceList,  {
-    "_id" : "5d643a63646c8a700c8e1a50", 
-    "id" : 24, 
-    "photoUrl" : "https://nearby-recommendations.s3-us-west-1.amazonaws.com/24.jpg", 
-    "title" : "Doloribus quidem consectetur animi.", 
-    "city" : "Raulburgh", 
-    "propertyType" : "velit quis beatae", 
-    "price" : 238,
-    "reviews" : 273, 
-    "__v" : 0 
-  }];
   const wrapper = shallow(
-    <App places={testPlaceList} savedList={[]} renderList={() => {}} />,
+    <App places={testPlaceList} />,
   );
-  const wrapperBig = shallow(
-    <App places={extendedList} savedList={[]} renderList={() => {}} />,
-  );  
-
+  
   it('should render 3 places', () => {
     expect(wrapper.children().length).toBe(3);
   });
@@ -76,23 +58,13 @@ describe('Place Component', () => {
 
   it('should have correct initial states', () => {
     expect(wrapper.state()).toEqual({ currentIndex: 0, places: [], translateValue: 0});
-    expect(wrapperBig.state()).toEqual({ currentIndex: 0, places: [], translateValue: 0});
   });
 
   it('should change index on click', () => {
-    wrapper.find('RightArrow').simulate('click');
-    expect(wrapper.state('currentIndex')).toEqual(0);
-    wrapper.find('LeftArrow').simulate('click');
-    expect(wrapper.state('currentIndex')).toEqual(0);
+    wrapper.find('fadedright').simulate('click');
+    expect(wrapper.state('finish')).toEqual(4);
+    wrapper.find('fadedleft').simulate('click');
+    expect(wrapper.state('finish')).toEqual(3);
   });
 
-  it('should change start and end state when limits are reached', () => {
-    expect(wrapperBig.state('start')).toBe(true);
-    expect(wrapperBig.state('end')).toBe(false);
-    wrapperBig.find({ name: 'next' }).simulate('click');
-    expect(wrapperBig.state('start')).toBe(false);
-    expect(wrapperBig.state('end')).toBe(true);
-    wrapperBig.find({ name: 'prev' }).simulate('click');
-    expect(wrapperBig.state('start')).toBe(true);
-  });
 });
