@@ -3,6 +3,26 @@ body {
     margin:0;
     padding:0;
   }
+
+  h1 {
+    font-family: Montserrat, sans-serif;
+    padding: 42px;
+    width: 1031px;
+    color: rgb(72, 72, 72);
+    font-size: 1.5em;
+  }
+
+  .propertyType {
+    font-family: Nunito Sans, sans-serff; 
+    padding-top: 8px;
+    padding-bottom: 2px;
+    font-style: bold;
+    font-size: 0.75em;
+    color:  rgb(72, 72, 72);
+    font-weight: 700px;
+    text-transform: uppercase;
+  }
+
   
   .slideshow {
     display: flex;
@@ -50,8 +70,6 @@ body {
   }
   
   .image {
-    width: 190px;
-    height: 130px;
     object-fit: cover;
     margin: auto 0.1em;
     border-radius: 5px;

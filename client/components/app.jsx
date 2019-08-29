@@ -71,7 +71,7 @@ class App extends Component {
     
     return (
       <React.Fragment>
-      <h1 style={{"fontFamily": "Montserrat script=allrev=1", 'font-style': 'normal', 'font-weight': 500}}>More places to stay</h1>
+      <h1 className='h1' tabIndex='-4'>More places to stay</h1>
       <div className="container">
         <div className="slideshow row col-md-12">
           <div className={fadedleft} onClick={this.leftClick.bind(this)}></div>
