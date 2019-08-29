@@ -68,7 +68,10 @@ class App extends Component {
     var finishindex = this.state.finish;
     const fadedleft = this.state.fadedleft ? "arrow-left faded-left" : "arrow-left";
     const fadedright = this.state.fadedright ? "arrow-right faded-right" : "arrow-right";
+    
     return (
+      <React.Fragment>
+      <h1 style={{"fontFamily": "Montserrat script=allrev=1", 'font-style': 'normal', 'font-weight': 500}}>More places to stay</h1>
       <div className="container">
         <div className="slideshow row col-md-12">
           <div className={fadedleft} onClick={this.leftClick.bind(this)}></div>
@@ -79,6 +82,7 @@ class App extends Component {
           <div className={fadedright} onClick={this.rightClick.bind(this)}></div>
         </div>
       </div>
+      </React.Fragment>
     )
   }
 };
