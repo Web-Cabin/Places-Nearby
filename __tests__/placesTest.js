@@ -2,10 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { configure } from 'enzyme';
 import App from '../client/components/app.jsx';
-<<<<<<< HEAD
-
-=======
->>>>>>> 6f156c3faa9fc807c01acff4d1067e89d4cd8933
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });

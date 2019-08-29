@@ -3,7 +3,69 @@ body {
     margin:0;
     padding:0;
   }
-  
+
+  h1 {
+    font-family: Montserrat, sans-serif;
+    padding: 42px;
+    width: 1031px;
+    color: rgb(72, 72, 72);
+    font-size: 1.5em;
+  }
+
+  div.item {
+    vertical-align: top;
+    display: inline-block;
+    /* To horizontally center images and caption */
+    text-align: left;
+    width: 350px; 
+  }
+
+  .propertyType {
+    font-family: Nunito Sans, sans-serff; 
+    padding-top: 8px;
+    padding-bottom: 2px;
+    font-style: bold;
+    font-size: 0.75em;
+    color:  rgb(72, 72, 72);
+    font-weight: 700px;
+    text-transform: uppercase;
+  }
+
+  .price {
+    font-family: Montserrat, sans-serff; 
+    padding-top: 3px;
+    padding-bottom: 1px;
+    font-size: .9em;
+    font-weight: 400px;
+    color: rgb(72,72,72);
+  }
+
+  #wrapper {
+    display: flex;
+  }
+
+  #stars {
+    color: rgb(0,139,139)
+  }
+
+  #reviews {
+    flex: 1;
+    font-family: Montserrat, sans-serff; 
+    padding-top: 3px;
+    padding-bottom: 1px;
+    font-size: .9em;
+    font-weight: 400px;
+    color: rgb(72,72,72);
+  }
+
+  .description {
+    font-family: Nunito Sans, sans-serff; 
+    font-size: 1.05em;
+    font-weight: 600px;
+    font-style: bold; 
+    color: rgb(72, 72, 72);
+  }
+
   .slideshow {
     display: flex;
     flex-direction: row;
@@ -50,8 +112,6 @@ body {
   }
   
   .image {
-    width: 190px;
-    height: 130px;
     object-fit: cover;
     margin: auto 0.1em;
     border-radius: 5px;
