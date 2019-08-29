@@ -78,11 +78,6 @@ class App extends React.Component {
           {
             this.state.places.slice(startindex, finishindex).map(place => 
             <PlacesCard key={place.id} place={place} />)
-              // return (
-              //   <div key={imageindex}>
-              //     <img className="image" src={image.photoUrl} />
-              //   </div>
-              // )
             }
            }
           <div className={fadedright} onClick={this.rightClick.bind(this)}></div>
