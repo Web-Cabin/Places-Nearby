@@ -2,12 +2,18 @@ import React from 'react';
 
 const PlacesCard = ({place}) => {
     return (
-        <div className="entryDiv">
+        <div className="item">
+          {/* //{} */}
           <img src={place.photoUrl} width="350" height="200"></img>
-          <div className ='propertyType'>{place.propertyType} · {place.city}</div>
-          <div className='description'>{place.title}</div>
-          <div className='price'>${place.price}/night</div>
-          <div className='reviews'>{place.reviews}</div>  
+          <span>
+            <div className ='propertyType'>{place.propertyType} · {place.city}</div>
+            <div className='description'>{place.title}</div>
+            <div className='price'>${place.price}/night</div>
+            <div id="wrapper">
+              <div id='stars'>★★★★★</div>
+              <div id='reviews'>{place.reviews}</div>
+            </div>
+          </span>
         </div>
     )
 }
