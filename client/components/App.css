@@ -12,6 +12,7 @@ h1 {
   font-size: 1.5em;
 }
 
+<<<<<<< HEAD
 div.item {
   margin: 10px; 
   vertical-align: top;
@@ -20,6 +21,16 @@ div.item {
   text-align: left;
   width: 350px; 
 }
+=======
+  div.item {
+    margin: 10px; 
+    vertical-align: top;
+    display: inline-block;
+    /* To horizontally center images and caption */
+    text-align: left;
+    width: 350px; 
+  }
+>>>>>>> master
 
 .propertyType {
   font-family: Nunito Sans, sans-serff; 
@@ -67,6 +78,7 @@ div.item {
   color: rgb(72, 72, 72);
 }
 
+<<<<<<< HEAD
 .slideshow {
   display: flex;
   flex-direction: row;
@@ -114,3 +126,68 @@ div.item {
   border-radius: 5px;
   animation: appear 1.5s ease-in;
 }
+=======
+  .slideshow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    padding: 2em;
+    background-color: #ffffff;
+    margin: 2em auto;
+    border-radius: 10px;
+  }
+  
+  .arrow-left {
+    margin-top: 110px; 
+    top: 58%;
+    width: 2vmin;
+    height: 2vmin;
+    background: transparent;
+    border-top: 0.5vmin solid grey;
+    border-right: 0.5vmin solid grey;
+    box-shadow: 0 0 0 lightgray;
+    transition: all 200ms ease;
+    right: -25px;
+    transform: translate3d(0,-50%,0) rotate(-135deg);
+  }
+  
+  .arrow-right {
+    margin-top: 110px; 
+    top: 58%;
+    width: 2vmin;
+    height: 2vmin;
+    background: transparent;
+    border-top: 0.5vmin solid grey;
+    border-right: 0.5vmin solid grey;
+    box-shadow: 0 0 0 lightgray;
+    transition: all 200ms ease;
+    left: -25px;
+    transform: translate3d(0,-50%,0) rotate(45deg);
+    /* align-self: center; */
+    /* width: 2vmin;
+    height: 2vmin;
+    border-top: 0.5em solid grey;
+    border-right:  0.5vmin solid grey;
+    box-shadow: 0 0 0 lightgray;
+    left: -25px;  */
+  }
+  
+  /* .faded-left {
+    border-right: 3em solid;
+  }
+  
+  .faded-right {
+    border-left: 3em solid;
+  } */
+  
+  .image {
+    object-fit: cover;
+    margin: auto 0.1em;
+    border-radius: 5px;
+    animation: appear 1.5s ease-in;
+  }
+  
+>>>>>>> master
