@@ -1,120 +1,116 @@
 body {
-    height: 100%;
-    margin:0;
-    padding:0;
-  }
+  height: 100%;
+  margin:0;
+  padding:0;
+}
 
-  h1 {
-    font-family: Montserrat, sans-serif;
-    padding: 42px;
-    width: 1031px;
-    color: rgb(72, 72, 72);
-    font-size: 1.5em;
-  }
+h1 {
+  font-family: Montserrat, sans-serif;
+  padding: 42px;
+  width: 1031px;
+  color: rgb(72, 72, 72);
+  font-size: 1.5em;
+}
 
-  div.item {
-    vertical-align: top;
-    display: inline-block;
-    /* To horizontally center images and caption */
-    text-align: left;
-    width: 350px; 
-  }
+div.item {
+  margin: 10px; 
+  vertical-align: top;
+  display: inline-block;
+  /* To horizontally center images and caption */
+  text-align: left;
+  width: 350px; 
+}
 
-  .propertyType {
-    font-family: Nunito Sans, sans-serff; 
-    padding-top: 8px;
-    padding-bottom: 2px;
-    font-style: bold;
-    font-size: 0.75em;
-    color:  rgb(72, 72, 72);
-    font-weight: 700px;
-    text-transform: uppercase;
-  }
+.propertyType {
+  font-family: Nunito Sans, sans-serff; 
+  padding-top: 8px;
+  padding-bottom: 2px;
+  font-style: bold;
+  font-size: 0.75em;
+  color:  rgb(72, 72, 72);
+  font-weight: 700px;
+  text-transform: uppercase;
+}
 
-  .price {
-    font-family: Montserrat, sans-serff; 
-    padding-top: 3px;
-    padding-bottom: 1px;
-    font-size: .9em;
-    font-weight: 400px;
-    color: rgb(72,72,72);
-  }
+.price {
+  font-family: Montserrat, sans-serff; 
+  padding-top: 3px;
+  padding-bottom: 1px;
+  font-size: .9em;
+  font-weight: 400px;
+  color: rgb(72,72,72);
+}
 
-  #wrapper {
-    display: flex;
-  }
+#wrapper {
+  display: flex;
+}
 
-  #stars {
-    color: rgb(0,139,139)
-  }
+#stars {
+  color: rgb(0,139,139)
+}
 
-  #reviews {
-    flex: 1;
-    font-family: Montserrat, sans-serff; 
-    padding-top: 3px;
-    padding-bottom: 1px;
-    font-size: .9em;
-    font-weight: 400px;
-    color: rgb(72,72,72);
-  }
+#reviews {
+  flex: 1;
+  font-family: Montserrat, sans-serff; 
+  padding-top: 3px;
+  padding-bottom: 1px;
+  font-size: .9em;
+  font-weight: 400px;
+  color: rgb(72,72,72);
+}
 
-  .description {
-    font-family: Nunito Sans, sans-serff; 
-    font-size: 1.05em;
-    font-weight: 600px;
-    font-style: bold; 
-    color: rgb(72, 72, 72);
-  }
+.description {
+  font-family: Nunito Sans, sans-serff; 
+  font-size: 1.05em;
+  font-weight: 600px;
+  font-style: bold; 
+  color: rgb(72, 72, 72);
+}
 
-  .slideshow {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    height: 100%;
-    padding: 2em;
-    background-color: #ffffff;
-    margin: 2em auto;
-    border-radius: 10px;
-  }
-  
-  .arrow-left {
-    align-self: center;
-    height:0;
-    width: 2em;
-    padding:0;
-    margin: 0.5em;
-    border-top: 3em solid transparent;
-    border-right: 3em solid;
-    border-bottom: 3em solid transparent;
-    cursor: pointer;
-  }
-  
-  .arrow-right {
-    align-self: center;
-    height:0;
-    width: 2em;
-    padding:0;
-    margin: 0.5em;
-    border-top: 3em solid transparent;
-    border-left: 3em solid;
-    border-bottom: 3em solid transparent;
-    cursor: pointer;
-  }
-  
-  .faded-left {
-    border-right: 3em solid;
-  }
-  
-  .faded-right {
-    border-left: 3em solid;
-  }
-  
-  .image {
-    object-fit: cover;
-    margin: auto 0.1em;
-    border-radius: 5px;
-    animation: appear 1.5s ease-in;
-  }
-  
+.slideshow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  padding: 2em;
+  background-color: #ffffff;
+  margin: 2em auto;
+  border-radius: 10px;
+}
+
+.arrow-left {
+  margin-top: 110px; 
+  top: 58%;
+  width: 2vmin;
+  height: 2vmin;
+  background: transparent;
+  border-top: 0.5vmin solid grey;
+  border-right: 0.5vmin solid grey;
+  box-shadow: 0 0 0 lightgray;
+  transition: all 200ms ease;
+  right: -25px;
+  transform: translate3d(0,-50%,0) rotate(-135deg);
+}
+
+.arrow-right {
+  margin-top: 110px; 
+  top: 58%;
+  width: 2vmin;
+  height: 2vmin;
+  background: transparent;
+  border-top: 0.5vmin solid grey;
+  border-right: 0.5vmin solid grey;
+  box-shadow: 0 0 0 lightgray;
+  transition: all 200ms ease;
+  left: -25px;
+  transform: translate3d(0,-50%,0) rotate(45deg);
+}
+
+.image {
+  object-fit: cover;
+  margin: auto 0.1em;
+  border-radius: 5px;
+  animation: appear 1.5s ease-in;
+}
