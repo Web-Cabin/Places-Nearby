@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">38.89% </span>
+        <span class="strong">41.67% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/18</span>
+        <span class='fraction'>5/12</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">30% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>4/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">38.89% </span>
+        <span class="strong">41.67% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>7/18</span>
+        <span class='fraction'>5/12</span>
       </div>
     </div>
     <p class="quiet">
@@ -104,20 +104,7 @@
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
 <a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -135,7 +122,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -145,9 +131,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -156,8 +139,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -167,10 +148,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -178,9 +155,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -205,7 +179,6 @@ class App extends Component {
   componentDidMount() {
     this.fetchPlaces()
   }
-&nbsp;
   fetchPlaces() {
     axios.get('/api/nearbyPlaces', {
     })
@@ -215,41 +188,31 @@ class App extends Component {
         places: places });
     })
   }
-&nbsp;
 <span class="fstat-no" title="function not covered" >  le</span>ftClick() {
-    let start = <span class="cstat-no" title="statement not covered" >this.state.start;</span>
-    let finish = <span class="cstat-no" title="statement not covered" >this.state.finish;</span>
-<span class="cstat-no" title="statement not covered" >    if (start &gt; 0 &amp;&amp; finish &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >    if (this.state.start &gt; 0 &amp;&amp; this.state.finish &gt; 0) {</span>
 <span class="cstat-no" title="statement not covered" >      this.setState({</span>
-        start: start - 1,
-        finish: finish - 1,
+        start: this.state.start - 1,
+        finish: this.state.finish - 1,
       });
     } 
   }
 <span class="fstat-no" title="function not covered" >  ri</span>ghtClick() {
-    let start = <span class="cstat-no" title="statement not covered" >this.state.start;</span>
-    let finish = <span class="cstat-no" title="statement not covered" >this.state.finish;</span>
-<span class="cstat-no" title="statement not covered" >    if (finish &lt; this.state.places.length) {</span>
+<span class="cstat-no" title="statement not covered" >    if (this.state.finish &lt; this.state.places.length) {</span>
 <span class="cstat-no" title="statement not covered" >      this.setState({</span>
-        start: start + 1,
-        finish: finish + 1
+        start: this.state.start + 1,
+        finish: this.state.finish + 1
       });
     } 
   }
   render() {
-    var startindex = this.state.start;
-    var finishindex = this.state.finish;
-    
     return (
       &lt;div className = 'header'&gt;
       &lt;h1 className='h1' tabIndex='-10px'&gt;More places to stay&lt;/h1&gt;
       &lt;div&gt;
         &lt;div className="slideshow"&gt;
         {this.state.start !== 0 &amp;&amp; (<span class="branch-1 cbranch-no" title="branch not covered" >&lt;div className='arrow-left' onClick={this.leftClick.bind(this)}&gt;&lt;/div&gt;)</span>}
-          {
-            this.state.places.slice(startindex, finishindex).map(<span class="fstat-no" title="function not covered" >pl</span>ace =&gt; 
-<span class="cstat-no" title="statement not covered" >            &lt;PlacesCard key={place.id} place={place} /&gt;)</span>
-            }
+          {this.state.places.slice(this.state.start, this.state.finish).map(<span class="fstat-no" title="function not covered" >pl</span>ace =&gt; 
+<span class="cstat-no" title="statement not covered" >            &lt;PlacesCard key={place.id} place={place} /&gt;)</span>}
           {this.state.finish !== 12 &amp;&amp; (&lt;div className='arrow-right' onClick={this.rightClick.bind(this)}&gt;&lt;/div&gt;)}
         &lt;/div&gt;
       &lt;/div&gt;
@@ -257,15 +220,13 @@ class App extends Component {
     )
   }
 };
-&nbsp;
-export default App;
-&nbsp;</pre></td></tr>
+export default App;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Aug 30 2019 13:11:45 GMT-0700 (PDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Aug 30 2019 13:55:37 GMT-0700 (PDT)
 </div>
 </div>
 <script src="prettify.js"></script>

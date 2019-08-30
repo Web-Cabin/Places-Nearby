@@ -3,7 +3,6 @@ import React from 'react';
 const PlacesCard = ({place}) => {
     return (
         <div className="item">
-          {/* //{} */}
           <div className='heart'>&#9825;</div>
           <img src={place.photoUrl} width="350" height="200"></img>
           <span>
@@ -18,5 +17,4 @@ const PlacesCard = ({place}) => {
         </div>
     )
 }
-
 export default PlacesCard;

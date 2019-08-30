@@ -1,32 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1567195905103" clover="3.2.0">
-  <project timestamp="1567195905103" name="All files">
-    <metrics statements="20" coveredstatements="8" conditionals="10" coveredconditionals="3" methods="9" coveredmethods="4" elements="39" coveredelements="15" complexity="0" loc="20" ncloc="20" packages="1" files="2" classes="2"/>
+<coverage generated="1567198537756" clover="3.2.0">
+  <project timestamp="1567198537756" name="All files">
+    <metrics statements="14" coveredstatements="6" conditionals="10" coveredconditionals="3" methods="9" coveredmethods="4" elements="33" coveredelements="13" complexity="0" loc="14" ncloc="14" packages="1" files="2" classes="2"/>
     <file name="PlacesCard.jsx" path="/Users/michaelkim/Places-Nearby/client/components/PlacesCard.jsx">
       <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="3" count="2" type="stmt"/>
       <line num="4" count="0" type="stmt"/>
     </file>
     <file name="app.jsx" path="/Users/michaelkim/Places-Nearby/client/components/app.jsx">
-      <metrics statements="18" coveredstatements="7" conditionals="10" coveredconditionals="3" methods="8" coveredmethods="4"/>
+      <metrics statements="12" coveredstatements="5" conditionals="10" coveredconditionals="3" methods="8" coveredmethods="4"/>
       <line num="8" count="1" type="stmt"/>
       <line num="9" count="1" type="stmt"/>
       <line num="16" count="1" type="stmt"/>
-      <line num="20" count="1" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="22" count="0" type="stmt"/>
       <line num="23" count="0" type="stmt"/>
-      <line num="24" count="0" type="stmt"/>
-      <line num="30" count="0" type="stmt"/>
-      <line num="31" count="0" type="stmt"/>
-      <line num="32" count="0" type="cond" truecount="0" falsecount="4"/>
-      <line num="33" count="0" type="stmt"/>
-      <line num="40" count="0" type="stmt"/>
-      <line num="41" count="0" type="stmt"/>
-      <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="43" count="0" type="stmt"/>
-      <line num="50" count="1" type="stmt"/>
-      <line num="51" count="1" type="stmt"/>
-      <line num="53" count="1" type="stmt"/>
-      <line num="61" count="0" type="stmt"/>
+      <line num="28" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="29" count="0" type="stmt"/>
+      <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="44" count="1" type="stmt"/>
+      <line num="51" count="0" type="stmt"/>
     </file>
   </project>
 </coverage>

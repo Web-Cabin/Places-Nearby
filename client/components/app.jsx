@@ -15,7 +15,6 @@ class App extends Component {
   componentDidMount() {
     this.fetchPlaces()
   }
-
   fetchPlaces() {
     axios.get('/api/nearbyPlaces', {
     })
@@ -25,7 +24,6 @@ class App extends Component {
         places: places });
     })
   }
-
   leftClick() {
     if (this.state.start > 0 && this.state.finish > 0) {
       this.setState({
@@ -58,5 +56,4 @@ class App extends Component {
     )
   }
 };
-
 export default App;

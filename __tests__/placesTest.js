@@ -46,6 +46,9 @@ describe('Place Component', () => {
   const wrapper = shallow(
     <App places={testPlaceList} />,
   );
+  it('renders', () => {
+    expect(wrapper).toMatchSnapshot(); 
+  })
   
   it('should render 3 places', () => {
     expect(wrapper.children().length).toBe(2);
@@ -53,6 +56,10 @@ describe('Place Component', () => {
 
   it('should render the Place component', () => {
     expect(wrapper.find('Place').exists());
+  });
+
+  it('checks ComponentDidMount renders correctly', () => {
+    expect(wrapper.places).toEqual(wrapper.fetchPlaces)
   });
 
   it('should have correct initial states', () => {
