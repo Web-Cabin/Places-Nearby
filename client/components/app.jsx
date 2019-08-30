@@ -27,39 +27,30 @@ class App extends Component {
   }
 
   leftClick() {
-    let start = this.state.start;
-    let finish = this.state.finish;
-    if (start > 0 && finish > 0) {
+    if (this.state.start > 0 && this.state.finish > 0) {
       this.setState({
-        start: start - 1,
-        finish: finish - 1,
+        start: this.state.start - 1,
+        finish: this.state.finish - 1,
       });
     } 
   }
   rightClick() {
-    let start = this.state.start;
-    let finish = this.state.finish;
-    if (finish < this.state.places.length) {
+    if (this.state.finish < this.state.places.length) {
       this.setState({
-        start: start + 1,
-        finish: finish + 1
+        start: this.state.start + 1,
+        finish: this.state.finish + 1
       });
     } 
   }
   render() {
-    var startindex = this.state.start;
-    var finishindex = this.state.finish;
-    
     return (
       <div className = 'header'>
       <h1 className='h1' tabIndex='-10px'>More places to stay</h1>
       <div>
         <div className="slideshow">
         {this.state.start !== 0 && (<div className='arrow-left' onClick={this.leftClick.bind(this)}></div>)}
-          {
-            this.state.places.slice(startindex, finishindex).map(place => 
-            <PlacesCard key={place.id} place={place} />)
-            }
+          {this.state.places.slice(this.state.start, this.state.finish).map(place => 
+            <PlacesCard key={place.id} place={place} />)}
           {this.state.finish !== 12 && (<div className='arrow-right' onClick={this.rightClick.bind(this)}></div>)}
         </div>
       </div>

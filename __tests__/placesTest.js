@@ -48,7 +48,7 @@ describe('Place Component', () => {
   );
   
   it('should render 3 places', () => {
-    expect(wrapper.children().length).toBe(3);
+    expect(wrapper.children().length).toBe(2);
   });
 
   it('should render the Place component', () => {
@@ -56,7 +56,7 @@ describe('Place Component', () => {
   });
 
   it('should have correct initial states', () => {
-    expect(wrapper.state()).toEqual({ currentIndex: 0, places: [], translateValue: 0});
+    expect(wrapper.state()).toEqual({ start: 0, finish: 3, places: []});
   });
 
   it('should change index on click', () => {

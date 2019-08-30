@@ -7,8 +7,11 @@ describe('Place Component', () => {
   const wrapper = shallow(<PlacesCard place={testingPlace} />);
 
   expect(wrapper.props()).toEqual({ place: place })
-  expect(wrapper.find('img').prop('src')).toBe('Private Room - Haleakala')
-  expect(wrapper.find('h2').text()).toBe('Test Place')
+  
+  it('should render a Place', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
+
   //Title 
   it('works', () => {
     expect(wrapper.exists()).toEqual(true)
