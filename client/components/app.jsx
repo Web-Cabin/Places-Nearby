@@ -51,10 +51,10 @@ class App extends Component {
     var finishindex = this.state.finish;
     
     return (
-      <React.Fragment>
-      <h1 className='h1' tabIndex='-4'>More places to stay</h1>
-      <div className="container">
-        <div className="slideshow row col-md-12">
+      <div className = 'header'>
+      <h1 className='h1' tabIndex='-10px'>More places to stay</h1>
+      <div>
+        <div className="slideshow">
         {this.state.start !== 0 && (<div className='arrow-left' onClick={this.leftClick.bind(this)}></div>)}
           {
             this.state.places.slice(startindex, finishindex).map(place => 
@@ -63,7 +63,7 @@ class App extends Component {
           {this.state.finish !== 12 && (<div className='arrow-right' onClick={this.rightClick.bind(this)}></div>)}
         </div>
       </div>
-      </React.Fragment>
+      </div>
     )
   }
 };

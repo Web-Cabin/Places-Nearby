@@ -4,6 +4,7 @@ const PlacesCard = ({place}) => {
     return (
         <div className="item">
           {/* //{} */}
+          <div className='heart'>&#9825;</div>
           <img src={place.photoUrl} width="350" height="200"></img>
           <span>
             <div className ='propertyType'>{place.propertyType} · {place.city}</div>
