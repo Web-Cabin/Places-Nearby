@@ -13,6 +13,7 @@ body {
   }
 
   div.item {
+    margin: 10px; 
     vertical-align: top;
     display: inline-block;
     /* To horizontally center images and caption */
@@ -80,36 +81,47 @@ body {
   }
   
   .arrow-left {
-    align-self: center;
-    height:0;
-    width: 2em;
-    padding:0;
-    margin: 0.5em;
-    border-top: 3em solid transparent;
-    border-right: 3em solid;
-    border-bottom: 3em solid transparent;
-    cursor: pointer;
+    margin-top: 110px; 
+    top: 58%;
+    width: 2vmin;
+    height: 2vmin;
+    background: transparent;
+    border-top: 0.5vmin solid grey;
+    border-right: 0.5vmin solid grey;
+    box-shadow: 0 0 0 lightgray;
+    transition: all 200ms ease;
+    right: -25px;
+    transform: translate3d(0,-50%,0) rotate(-135deg);
   }
   
   .arrow-right {
-    align-self: center;
-    height:0;
-    width: 2em;
-    padding:0;
-    margin: 0.5em;
-    border-top: 3em solid transparent;
-    border-left: 3em solid;
-    border-bottom: 3em solid transparent;
-    cursor: pointer;
+    margin-top: 110px; 
+    top: 58%;
+    width: 2vmin;
+    height: 2vmin;
+    background: transparent;
+    border-top: 0.5vmin solid grey;
+    border-right: 0.5vmin solid grey;
+    box-shadow: 0 0 0 lightgray;
+    transition: all 200ms ease;
+    left: -25px;
+    transform: translate3d(0,-50%,0) rotate(45deg);
+    /* align-self: center; */
+    /* width: 2vmin;
+    height: 2vmin;
+    border-top: 0.5em solid grey;
+    border-right:  0.5vmin solid grey;
+    box-shadow: 0 0 0 lightgray;
+    left: -25px;  */
   }
   
-  .faded-left {
+  /* .faded-left {
     border-right: 3em solid;
   }
   
   .faded-right {
     border-left: 3em solid;
-  }
+  } */
   
   .image {
     object-fit: cover;
