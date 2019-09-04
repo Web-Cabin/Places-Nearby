@@ -1,7 +1,7 @@
 const express = require('express');
 const dbPlaces = require('../models/placesModel');
-const dbActivities = require('../models/activitiesModel')
-// const path = require('path');
+const cors = require('cors')
+
 
 const port = 3000;
 const app = express();
@@ -11,6 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(`${__dirname}./../client/dist`));
+app.use(cors())
 
 
 app.get('/api/nearbyPlaces', (req, res) => {
@@ -23,22 +24,10 @@ app.get('/api/nearbyPlaces', (req, res) => {
   })
 })
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:3000')
-  next();
-})
-
-
-// app.get('/api/nearbyActivities', (req, res) => {
-//   dbActivities.getAllActivities((err, data) => {
-//     if (err) {
-//       throw err; 
-//     } else {
-//       res.send(data)
-//     }
-//   })
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', 'http://localhost:3000')
+//   next();
 // })
-
 
 app.listen(port, () => {
   console.log(`Listening to port ${[port]}`);
