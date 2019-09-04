@@ -16,7 +16,7 @@ class App extends Component {
     this.fetchPlaces()
   }
   fetchPlaces() {
-    axios.get('/api/nearbyPlaces', {
+    axios.get('http://localhost:3003/api/listings/:id', {
     })
     .then(res => {
       const places = res.data;

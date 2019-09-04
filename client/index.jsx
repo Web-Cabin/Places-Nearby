@@ -9,4 +9,5 @@ WebFont.load({
     },
   });
 
-ReactDOM.render(<App />, document.getElementById('app'));
+window.Places = App;
+// ReactDOM.render(<App />, document.getElementById('app'));
