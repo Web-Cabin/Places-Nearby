@@ -11,15 +11,22 @@ class App extends Component {
       start: 0,
       finish: 3
     }
+    this.shuffle = this.shuffle.bind(this);
   }
   componentDidMount() {
     this.fetchPlaces()
   }
+
+  shuffle(places) {
+    return places.sort(() => Math.random() - 0.5);
+  }
+
   fetchPlaces() {
     axios.get('http://localhost:3003/api/listings/:id', {
     })
     .then(res => {
-      const places = res.data;
+      const places = this.shuffle(res.data);
+      //places = this.shuffle(places)
       this.setState({ 
         places: places });
     })
