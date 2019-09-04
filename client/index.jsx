@@ -10,4 +10,4 @@ WebFont.load({
   });
 
 window.Places = App;
-ReactDOM.render(<App />, document.getElementById('app'));
+//ReactDOM.render(<App />, document.getElementById('app'));
