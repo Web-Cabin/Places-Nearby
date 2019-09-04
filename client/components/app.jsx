@@ -22,11 +22,10 @@ class App extends Component {
   }
 
   fetchPlaces() {
-    axios.get('http://localhost:3003/api/listings/:id', {
+    axios.get(`http://localhost:3003/api/listings/${id}`, {
     })
     .then(res => {
       const places = this.shuffle(res.data);
-      //places = this.shuffle(places)
       this.setState({ 
         places: places });
     })
