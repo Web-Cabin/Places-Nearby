@@ -1,5 +1,5 @@
 module.exports = {
-    entry: __dirname + '/client/index.jsx',
+    entry: __dirname + '/client/components/app.jsx',
     module: {
       rules: [
         {
@@ -20,6 +20,7 @@ module.exports = {
     },
      output: {
       filename: 'bundle.js',
-      path: __dirname + '/client/dist'
+      path: __dirname + '/client/dist',
+      library: 'Places'
     }
   };
