@@ -22,6 +22,7 @@ class App extends Component {
   }
 
   fetchPlaces() {
+    var id = 3
     axios.get(`http://localhost:3003/api/listings/${id}`, {
     })
     .then(res => {
