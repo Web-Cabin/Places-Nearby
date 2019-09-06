@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 
 const db = mongoose.connection;
 
-mongoose.connect('mongodb://localhost/places', { useNewUrlParser: true });
+var mongoUrl = 'mongodb://database/places';
+
+mongoose.connect(mongoUrl,  { useNewUrlParser: true })
 
 const placeSchema = new mongoose.Schema({
   id: Number,

@@ -23,7 +23,7 @@ class App extends Component {
 
   fetchPlaces() {
     var id = 3
-    axios.get(`http://localhost:3003/api/listings/${id}`, {
+    axios.get(`localhost:3003/api/listings/${id}`, {
     })
     .then(res => {
       const places = this.shuffle(res.data);

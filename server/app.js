@@ -3,8 +3,11 @@ const dbPlaces = require('../models/placesModel');
 const cors = require('cors')
 
 
+
 const port = 3003;
 const app = express();
+
+
 
 //app.use(require('morgan')('dev'));
 
@@ -23,17 +26,6 @@ app.get('/api/listings/:id', (req, res) => {
     }
   })
 })
-
-// app.use((req, res, next) => {
-//   res.header("Access-Control-Allow-Origin", "http://localhost:3005");
-//   res.header("Access-Control-Allows-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// })
-
-// app.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', 'http://localhost:3000')
-//   next();
-// })
 
 app.listen(port, () => {
   console.log(`Listening to port ${[port]}`);
