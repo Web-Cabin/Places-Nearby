@@ -2,6 +2,7 @@ version: '3'
 
 services:
   places:
+    restart: always 
     build: .
     depends_on:
       - 'database'
