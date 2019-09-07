@@ -17,5 +17,5 @@ RUN npm install
 EXPOSE 3003
 
 # How do you start your app?
-CMD npm seed \
+CMD npm run seed \
     npm start
