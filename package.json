@@ -46,7 +46,8 @@
     "webpack-cli": "^3.3.7"
   },
   "scripts": {
-    "build": "webpack -d --watch",
+    "build:dev": "webpack -d --watch",
+    "build": "npx webpack --mode=production", 
     "seed": "node seed/seed.js",
     "start": "node server/app.js",
     "test": "jest --coverage"
