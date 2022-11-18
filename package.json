@@ -43,7 +43,7 @@
     "jest": "^24.9.0",
     "style-loader": "^1.0.0",
     "supertest": "^4.0.2",
-    "webpack-cli": "^3.3.7"
+    "webpack-cli": "^3.3.12"
   },
   "scripts": {
     "build": "webpack -d --watch",
